@@ -1,7 +1,7 @@
 # packages needed
 
 ## instructions
-1. before installing any package run  - ``` sudo apt-get update ```
+1. before installing any package run  - ``` sudo apt-get update ``` or ``` sudo apt update ```
 
 ## package manager
 1. snap - ``` sudo apt install snapd ```
