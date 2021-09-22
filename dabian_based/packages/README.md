@@ -9,7 +9,7 @@
 
 
 ## Text Editor
-1. Vs code - [Download](https://code.visualstudio.com/download)
+1. Vs code - [Download](https://code.visualstudio.com/download) or install ``` sudo snap install code --classic ```
 2. gedit - ``` sudo apt install gedit ```
 3. Notepad++ ``` sudo snap install notepad-plus-plus ```
 
