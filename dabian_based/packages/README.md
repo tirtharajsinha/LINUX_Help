@@ -1,4 +1,4 @@
-# packages needed
+# packages support
 
 ## instructions
 1. before installing any package run  - ``` sudo apt-get update ``` or ``` sudo apt update ```
