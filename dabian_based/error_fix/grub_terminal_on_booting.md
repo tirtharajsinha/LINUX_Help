@@ -1,4 +1,4 @@
-# GRUB terminal problem at installing ubuntu based Linux distro.
+<h1 style="color:cyan;">GRUB terminal problem at installing ubuntu based Linux distro</h1>
 ## Like - ubuntu, mint, zorin, elementary
 
 > in the grub rescue> command line type
@@ -33,7 +33,7 @@ insmod linux
 insmod normal
 normal
 ```
-## Now it should boot.
+<h2 style="color:green;">Now it should boot.</h2>
 
 ### Go to the commandline (e.g. start a "terminal") now, and execute:
 ```
