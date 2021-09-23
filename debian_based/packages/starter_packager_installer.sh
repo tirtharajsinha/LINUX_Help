@@ -95,9 +95,11 @@ exit 1
 fi
 echo -e "\u001b[32m-> kickstarting starter package installer \u001b[0m"
 
+echo -e -n "\u001b[35m want to install all? [y/n] : "
+read allperm
 
 # brave install
-echo -e -n "\u001b[35m want to install Brave-browser? [y/n] : "
+echo -e -n "\u001b[36m want to install Brave-browser? [y/n] : "
 read perm
 
 if [ $perm != "n" ]
