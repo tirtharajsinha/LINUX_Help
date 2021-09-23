@@ -35,6 +35,14 @@ sudo apt install brave-browser
 
 ## git 
 install - ``` sudo apt install git ```
+
+### configuire git
+```
+# name
+git config --global user.name "$name"
+# email
+git config --global user.email "$email"
+```
 ### set up ssh - 
 1. generate key
 ```
