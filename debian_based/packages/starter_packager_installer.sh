@@ -47,15 +47,15 @@ _ssh(){
     
     echo -e -n "\u001b[36m please enter email address : "
     read email
-    # ssh-keygen -t rsa -b 4096 -C "$email"
-    # echo -e "u001b[36mcopy the content and create a new ssh at https://github.com/settings/keysu001b[0m"
-    # gedit ~/.ssh/id_rsa.pub
-    # echo -e -n "\u001b[33m Did you created new SSH key in github ,if yes press [enter].... "
-    # read perm
-    # echo -e "Attempts to ssh to GitHub"
-    # echo -e "result should be something like---"
-    # echo -e "\u001b[0;2mHi username! You've successfully authenticated, but GitHub does not provide shell access.\u001b[0m"
-    # ssh -T git@github.com
+    ssh-keygen -t rsa -b 4096 -C "$email"
+    echo -e "u001b[36mcopy the content and create a new ssh at https://github.com/settings/keysu001b[0m"
+    gedit ~/.ssh/id_rsa.pub
+    echo -e -n "\u001b[33m Did you created new SSH key in github ,if yes press [enter].... "
+    read perm
+    echo -e "Attempts to ssh to GitHub"
+    echo -e "result should be something like---"
+    echo -e "\u001b[0;2mHi username! You've successfully authenticated, but GitHub does not provide shell access.\u001b[0m"
+    ssh -T git@github.com
 }
 _python3(){
     echo -e "\u001b[33mInstalling python3 .....\u001b[0m"
