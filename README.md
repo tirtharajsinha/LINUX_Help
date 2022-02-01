@@ -31,7 +31,7 @@ Repository for essential Information on Linux .
 
 | index  | Name | Best for | Visit |
 | :---- |:---------------:| :-----:| :-------------: |
-| 1 | Gnome | all Ubuntu based distros,fedora | [visit](https://www.gnome.org) |
+| 1 | Gnome | all Ubuntu based distros,fedora,manjaro | [visit](https://www.gnome.org) |
 | 2 | XFCE | MXLinux,Manjaro,mint | [Download](https://www.xfce.org/) |
 | 3 | Cinnamon | linux mint | [Download](https://cinnamon-spices.linuxmint.com/) |
 | 4 | Mate | mint,ubuntu | [Download](https://mate-desktop.org/) |
