@@ -11,7 +11,7 @@ Repository for essential Information on Linux .
 | 3 | Elementary OS | Ubuntu | [Download](https://elementary.io/) |
 | 4 | Zorin OS | Ubuntu | [Download](https://www.zorinos.com/) |
 | 5 | Manjaro | Arch | [Download](https://manjaro.org/) |
-| 6 | Mx Linux | Arch | [Download](https://mxlinux.org/) |
+| 6 | Mx Linux | Dabian | [Download](https://mxlinux.org/) |
 | 7 | EndeavourOS | Arch | [Download](https://endeavouros.com/) |
 | 8 | Dabian | Independent | [Download](http://www.debian.org/) |
 | 9 | Pop!OS | Ubuntu | [Download](https://system76.com/pop) |
