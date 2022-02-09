@@ -1,11 +1,8 @@
 #!bin/bash
-_brave(){
-    echo -e "\u001b[33mInstalling brave-browser.....\u001b[0m"
-    sudo apt install apt-transport-https curl
-    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-    echo -e "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+_firefox(){
+    echo -e "\u001b[33mInstalling firefox-browser.....\u001b[0m"
     sudo apt update
-    sudo apt install brave-browser
+    sudo apt install firefox
 }
 _git(){
     echo -e "\u001b[33mInstalling git.....\u001b[0m"
@@ -15,10 +12,10 @@ _gedit(){
     echo -e "\u001b[33mInstalling gedit (Text Editor).....\u001b[0m"
     sudo apt install gedit
 }
-_vscode(){
-    echo -e "\u001b[33mInstalling Visual studio code (Text Editor).....\u001b[0m"
-    sudo snap install code --classic
-    echo -e "\u001b[35mIf It does not install vs code or show error download pakage from here .. https://code.visualstudio.com/download and try to install\u001b[0m"
+_ranger(){
+    echo -e "\u001b[33mInstalling ranger (Text Editor).....\u001b[0m"
+    sudo apt install ranger
+    sudo apt install highlight
 }
 _neofetch(){
     app="neofetch"
@@ -78,10 +75,10 @@ _pip3(){
 
 echo -e "\u001b[36m welcome to starter package installer \u001b[0m"
 echo -e "\u001b[33m Processes... - \u001b[0m"
-echo -e "1. Brave-browser."
+echo -e "1. firefox-browser."
 echo -e "2. git"
 echo -e "3. gedit"
-echo -e "4. visual studio code"
+echo -e "4. ranger"
 echo -e "5. neofetch"
 echo -e "6. configuere git"
 echo -e "7. SSH connection to github.com"
@@ -98,22 +95,22 @@ echo -e "\u001b[32m-> kickstarting starter package installer \u001b[0m"
 echo -e -n "\u001b[35m want to install all? [y/n] : "
 read allperm
 
-# brave install
-echo -e -n "\u001b[36m want to install Brave-browser? [y/n] : "
+# firefox install
+echo -e -n "\u001b[36m want to install firefox-browser? [y/n] : "
 read perm
 
 if [ $perm != "n" ]
 then
-dpkg -s brave-browser &> /dev/null
+dpkg -s firefox &> /dev/null
 
 if [ $? -eq 0 ]; then
-    echo -e "\u001b[32mBrave is already installed. \xE2\x9C\x94\u001b[0m"
+    echo -e "\u001b[32mfirefox is already installed. \xE2\x9C\x94\u001b[0m"
 else
-_brave
+_firefox
 fi
 
 else
-echo -e "\u001b[32m Brave-browser successfuly Aborted. \xE2\x9D\x8C\u001b[0m"
+echo -e "\u001b[32m firefox-browser successfuly Aborted. \xE2\x9D\x8C\u001b[0m"
 fi
 
 # gedit install
@@ -157,18 +154,18 @@ fi
 
 # _vscode
 
-dpkg -s code &> /dev/null
+dpkg -s ranger &> /dev/null
 
 if [ $? -eq 0 ]; then
-    echo -e "\u001b[32mVS code already installed. \xE2\x9C\x94\u001b[0m"
+    echo -e "\u001b[32mranger already installed. \xE2\x9C\x94\u001b[0m"
 else
-echo -e -n "\u001b[36m want to install vs code? [y/n] : "
+echo -e -n "\u001b[36m want to install ranger? [y/n] : "
 read permi
 if [ $permi != "n" ]
 then
-_vscode
+_ranger
 else
-echo -e "\u001b[32m neofetch installation successfuly Aborted. \xE2\x9D\x8C\u001b[0m"
+echo -e "\u001b[32m ranger installation successfuly Aborted. \xE2\x9D\x8C\u001b[0m"
 fi
 
 fi
@@ -234,8 +231,8 @@ fi
 
 echo "---------------------------------------"
 app=""
-# brave
-app="brave-browser"
+# firefox
+app="firefox"
 dpkg -s $app &> /dev/null
 
 if [ $? -eq 0 ]; then
@@ -275,13 +272,13 @@ else
 fi
 
 # neofetch
-app="code"
+app="ranger"
 dpkg -s $app &> /dev/null
 
 if [ $? -eq 0 ]; then
-    echo -e "| visual studio $app ---- \u001b[32m installed \xE2\x9C\x94\u001b[0m"
+    echo -e "| $app ---- \u001b[32m installed \xE2\x9C\x94\u001b[0m"
 else
-    echo -e "| visual studio $app ---- \u001b[31m not installed \xE2\x9D\x8C\u001b[0m"
+    echo -e "| $app ---- \u001b[31m not installed \xE2\x9D\x8C\u001b[0m"
     
 fi
 
@@ -290,9 +287,9 @@ app="python3"
 dpkg -s $app &> /dev/null
 
 if [ $? -eq 0 ]; then
-    echo -e "| visual studio $app ---- \u001b[32m installed \xE2\x9C\x94\u001b[0m"
+    echo -e "| $app ---- \u001b[32m installed \xE2\x9C\x94\u001b[0m"
 else
-    echo -e "| visual studio $app ---- \u001b[31m not installed \xE2\x9D\x8C\u001b[0m"
+    echo -e "| $app ---- \u001b[31m not installed \xE2\x9D\x8C\u001b[0m"
 fi
 
 # pip3
@@ -308,7 +305,7 @@ fi
 echo "---------------------------------------"
 
 # uninitializing functions
-unset -f _brave
+unset -f _firefox
 unset -f _gedit
 unset -f _git
 unset -f _neofetch
