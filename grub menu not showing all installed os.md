@@ -1,4 +1,4 @@
-# grub menu not showing all installed os (fixed)
+
 
 1. Edit the file ```/etc/default/grub```
 

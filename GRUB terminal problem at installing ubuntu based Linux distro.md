@@ -1,4 +1,4 @@
-# GRUB terminal problem at installing ubuntu based Linux distro
+
 ## Like - ubuntu, mint, zorin, elementary
 
 > in the grub rescue> command line type
