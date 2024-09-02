@@ -31,11 +31,11 @@ sudo nano /etc/dnf/dnf.conf
 
 add below lines at the end of the file
 ```conf
-fastestmirror=True
+minrate=40k
+fastestmirror=False
 max_parallel_downloads=10
 defaultyes=True
 keepcache=True
-
 ```
 
 4. Update distro
@@ -133,7 +133,16 @@ sudo dnf erase kmahjongg kpat kmines
 2. don't use kde online accounts(use google-drive-ocamlfuse and onedriver)
 
 
+### Battery Life
 
+- Follow this if you have a Laptop and are facing sub optimal battery backup.
+- power-profiles-daemon which come pre-configured works great on a great majority of systems but still in case you're facing sub-optimal battery backup you try installing tlp by:
+- `sudo dnf install tlp tlp-rdw`
+- and mask power-profiles-daemon by:
+- `sudo systemctl mask power-profiles-daemon`
+- Also install powertop by:
+- `sudo dnf install powertop`
+- `sudo powertop --auto-tune`
 
 ### Install Syncthing enable and start
 
@@ -385,7 +394,7 @@ Use a graphical packet manager like gnome-software or discover
 
 ## Way 2.1 - command line (Instant update)
 ```shell
-sudo dnf update
+sudo dnf update --refresh
 sudo flatpak update
 ```
 and Reboot
