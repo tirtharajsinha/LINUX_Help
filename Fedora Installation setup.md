@@ -65,11 +65,11 @@ Assuming your Downloads folder also in D: drive in windows and want to sync the 
 ```shell
 mv ~/Downloads/* ~/Developer/Downloads/
 rmdir ~/Downloads
-ln -s <MOUNT-POINT>/Downloads ~/Downloads
+ln -s /mnt/d_drive/Downloads ~/Downloads
 
 mv ~/Documents/* ~/Developer/Documents/
 rmdir ~/Documents
-ln -s <MOUNT-POINT>/Documents ~/Documents
+ln -s /mnt/d_drive/Documents ~/Documents
 ```
 
 
@@ -108,7 +108,17 @@ gh auth login
 For manual setup visit [tirtharajsinha/git-commands](https://github.com/tirtharajsinha/git-commands?tab=readme-ov-file#git-config-for-linux)
 
 13. Setup firewall with UFW. Follow this [tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu) .
-
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw deny in ssh
+sudo ufw allow out ssh
+sudo ufw allow 42000/tcp
+sudo ufw allow 42001/udp
+sudo ufw allow 42000/udp
+sudo ufw allow 42001/tcp
+sudo ufw enable
+```
 14. Customize the distro (themes, icons, fonts, wallpapers, extensions, key bindings etc. )
 
 ## Special Notes
@@ -290,7 +300,6 @@ alias gdrive="google-drive-ocamlfuse ~/googledrive"
 ### In Fedora official repo(dnf)
 - kitty
 - virtual machine manager
-- warpinator
 - remmina
 - vlc
 - timeshift
@@ -329,8 +338,10 @@ alias gdrive="google-drive-ocamlfuse ~/googledrive"
 1. obsidian
 2. onlyoffice desktop
 3. telegram desktop
-4. eliment matrix client
+4. podman desktop
 5. arduino ide v2
+6. vlc
+7. warpinator
 
 ## Installation scripts
 ```shell
